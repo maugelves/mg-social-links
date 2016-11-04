@@ -53,25 +53,6 @@ function mg_social_links(){
     <?php
 }
 
-function mg_social_share(){
-    echo '<ul class="social-share">';
-
-    $html="";
-    $permalink=urlencode(get_permalink());
-    $title=urlencode(get_the_title());
-    $summary=urlencode(get_the_excerpt());
-
-    $html.='<li><a class="gp" href="#" onclick="window.open(\'https://plus.google.com/share?url='.$permalink.'\',\'MsgWindow\',\'width=640,height=400\');return false;" target="_blank"><i class="fa fa-google-plus"></i><span>Google plus</span></a></li>';
-    $html.='<li><a class="in" href="#" onclick="window.open(\'https://www.linkedin.com/shareArticle?mini=true&url='.$permalink.'&title='.$title.'&summary='.$summary.'\',\'MsgWindow\',\'width=640,height=400\');return false;" target="_blank"><i class="fa fa-linkedin"></i><span>Linkedin</span></a></li>';
-    $html.='<li><a class="fb" href="#" onclick="window.open(\'https://www.facebook.com/sharer/sharer.php?u='.$permalink.'\',\'MsgWindow\',\'width=640,height=400\');return false;" target="_blank"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>';
-    $html.='<li><a class="tw" href="#" onclick="window.open(\'https://twitter.com/share?url='.$permalink.'&amp;text='.$title.'\',\'MsgWindow\',\'width=640,height=400\');return false;" target="_blank"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>';
-    $html.='<li><a class="email" href="mailto:?Subject='.__('Quiero compartir este enlace contigo','g4t').'&Body='.__('Hola, quiero compartir contigo este enlace, espero te sea de utilidad:','g4t').' '.get_the_title().' '.get_permalink().'" target="_blank"><i class="fa fa-envelope-o"></i><span>'.__('Enviar por email','g4t').'</span></a></li>';
-    echo $html;
-
-    echo '</ul>';
-}
-
-
 
 add_action('customize_register','mg_customize_social_links');
 function mg_customize_social_links( $wp_customize ) {
@@ -87,7 +68,6 @@ function mg_customize_social_links( $wp_customize ) {
     $wp_customize->add_setting( 'mg_social_linkedin', array( ) );
     $wp_customize->add_setting( 'mg_social_tumbler', array( ) );
     $wp_customize->add_setting( 'mg_social_twitter', array( ) );
-    $wp_customize->add_setting( 'mg_social_whatsapp', array( ) );
 
 
     $wp_customize->add_control( 'mg_social_facebook_control', array(
@@ -123,13 +103,6 @@ function mg_customize_social_links( $wp_customize ) {
         'type' => 'text',
         'section' => 'mg_social_links',
         'settings' => 'mg_social_linkedin'
-    ) );
-
-    $wp_customize->add_control( 'mg_social_whatsapp_control', array(
-        'label' => __( '¿Compartir en WhatsApp?' ),
-        'type' => 'checkbox',
-        'section' => 'mg_social_links',
-        'settings' => 'mg_social_whatsapp'
     ) );
 
 }
