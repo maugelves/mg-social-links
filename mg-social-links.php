@@ -26,27 +26,27 @@ function mg_social_links(){
     <div class="mg-social-links">
         <?php $url = get_theme_mod( 'mg_social_twitter' ); ?>
         <?php if( !empty( $url ) ): ?>
-        <a class="mgss__twitter mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Twitter" href="<?php echo $url; ?>"><i class="fa fa-twitter"></i></a>
+        <a class="mgss__twitter mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Twitter" href="<?php echo $url; ?>"><i class="icon-twitter"></i></a>
         <?php endif; ?>
 
         <?php $url = get_theme_mod( 'mg_social_tumblr' ); ?>
         <?php if( !empty( $url ) ): ?>
-        <a class="mgss__tumblr mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Tumblr" href="<?php echo $url; ?>"><i class="fa fa-tumblr"></i></a>
+        <a class="mgss__tumblr mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Tumblr" href="<?php echo $url; ?>"><i class="icon-tumblr"></i></a>
         <?php endif; ?>
 
         <?php $url = get_theme_mod( 'mg_social_facebook' ); ?>
         <?php if( !empty( $url ) ): ?>
-        <a class="mgss__facebook mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Facebook" href="<?php echo $url; ?>"><i class="fa fa-facebook"></i></a>
+        <a class="mgss__facebook mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Facebook" href="<?php echo $url; ?>"><i class="icon-facebook"></i></a>
         <?php endif; ?>
 
         <?php $url = get_theme_mod( 'mg_social_linkedin' ); ?>
         <?php if( !empty( $url ) ): ?>
-        <a class="mgss__linkedin mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="fa fa-linkedin"></i></a>
+        <a class="mgss__linkedin mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="icon-linkedin"></i></a>
         <?php endif; ?>
 
         <?php $url = get_theme_mod( 'mg_social_instagram' ); ?>
         <?php if( !empty( $url ) ): ?>
-            <a class="mgss__instagram mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="fa fa-instagram"></i></a>
+            <a class="mgss__instagram mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="icon-instagram"></i></a>
         <?php endif; ?>
 
     </div>
