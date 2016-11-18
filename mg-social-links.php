@@ -48,9 +48,19 @@ function mg_social_links(){
         <a <?php echo $target ?>class="mgss__linkedin mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="icon-linkedin"></i></a>
         <?php endif; ?>
 
+        <?php $url = get_theme_mod( 'mg_social_youtube' ); ?>
+        <?php if( !empty( $url ) ): ?>
+            <a <?php echo $target ?>class="mgss__youtube mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="icon-youtube-play"></i></a>
+        <?php endif; ?>
+
+        <?php $url = get_theme_mod( 'mg_social_vimeo' ); ?>
+        <?php if( !empty( $url ) ): ?>
+            <a <?php echo $target ?>class="mgss__vimeo mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="icon-vimeo"></i></a>
+        <?php endif; ?>
+
         <?php $url = get_theme_mod( 'mg_social_instagram' ); ?>
         <?php if( !empty( $url ) ): ?>
-            <a <?php echo $target ?>class="mgss__instagram mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="icon-instagram"></i></a>
+            <a <?php echo $target ?>class="mgss__instagram mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="icon-vimeo-squared"></i></a>
         <?php endif; ?>
 
     </div>
@@ -70,8 +80,10 @@ function mg_customize_social_links( $wp_customize ) {
     $wp_customize->add_setting( 'mg_social_facebook', array( ) );
     $wp_customize->add_setting( 'mg_social_instagram', array( ) );
     $wp_customize->add_setting( 'mg_social_linkedin', array( ) );
-    $wp_customize->add_setting( 'mg_social_tumbler', array( ) );
+    $wp_customize->add_setting( 'mg_social_tumblr', array( ) );
     $wp_customize->add_setting( 'mg_social_twitter', array( ) );
+    $wp_customize->add_setting( 'mg_social_youtube', array( ) );
+    $wp_customize->add_setting( 'mg_social_vimeo', array( ) );
     $wp_customize->add_setting( 'mg_social_blank', array( ) );
 
 
@@ -80,6 +92,20 @@ function mg_customize_social_links( $wp_customize ) {
         'type' => 'text',
         'section' => 'mg_social_links',
         'settings' => 'mg_social_facebook'
+    ) );
+
+    $wp_customize->add_control( 'mg_social_youtube_control', array(
+        'label' => __( 'YouTube URL', 'mgss'),
+        'type' => 'text',
+        'section' => 'mg_social_links',
+        'settings' => 'mg_social_youtube'
+    ) );
+
+    $wp_customize->add_control( 'mg_social_vimeo_control', array(
+        'label' => __( 'Vimeo URL', 'mgss'),
+        'type' => 'text',
+        'section' => 'mg_social_links',
+        'settings' => 'mg_social_vimeo'
     ) );
 
     $wp_customize->add_control( 'mg_social_instagram_control', array(
@@ -93,7 +119,7 @@ function mg_customize_social_links( $wp_customize ) {
         'label' => __( 'Tumblr URL', 'mgss' ),
         'type' => 'text',
         'section' => 'mg_social_links',
-        'settings' => 'mg_social_tumbler'
+        'settings' => 'mg_social_tumblr'
     ) );
 
     $wp_customize->add_control( 'mg_social_twitter_control', array(
