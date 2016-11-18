@@ -55,7 +55,7 @@ function mg_social_links(){
 
         <?php $url = get_theme_mod( 'mg_social_vimeo' ); ?>
         <?php if( !empty( $url ) ): ?>
-            <a <?php echo $target ?>class="mgss__vimeo mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="mgsf-icon-vimeo"></i></a>
+            <a <?php echo $target ?>class="mgss__vimeo mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="mgsf-icon-vimeo-squared"></i></a>
         <?php endif; ?>
 
         <?php $url = get_theme_mod( 'mg_social_instagram' ); ?>
