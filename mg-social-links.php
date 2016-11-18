@@ -30,37 +30,37 @@ function mg_social_links(){
     <div class="mg-social-links">
         <?php $url = get_theme_mod( 'mg_social_twitter' ); ?>
         <?php if( !empty( $url ) ): ?>
-        <a <?php echo $target ?>class="mgss__twitter mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Twitter" href="<?php echo $url; ?>"><i class="icon-twitter"></i></a>
+        <a <?php echo $target ?>class="mgss__twitter mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Twitter" href="<?php echo $url; ?>"><i class="mgsf-icon-twitter"></i></a>
         <?php endif; ?>
 
         <?php $url = get_theme_mod( 'mg_social_tumblr' ); ?>
         <?php if( !empty( $url ) ): ?>
-        <a <?php echo $target ?>class="mgss__tumblr mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Tumblr" href="<?php echo $url; ?>"><i class="icon-tumblr"></i></a>
+        <a <?php echo $target ?>class="mgss__tumblr mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Tumblr" href="<?php echo $url; ?>"><i class="mgsf-icon-tumblr"></i></a>
         <?php endif; ?>
 
         <?php $url = get_theme_mod( 'mg_social_facebook' ); ?>
         <?php if( !empty( $url ) ): ?>
-        <a <?php echo $target ?>class="mgss__facebook mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Facebook" href="<?php echo $url; ?>"><i class="icon-facebook"></i></a>
+        <a <?php echo $target ?>class="mgss__facebook mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Facebook" href="<?php echo $url; ?>"><i class="mgsf-icon-facebook"></i></a>
         <?php endif; ?>
 
         <?php $url = get_theme_mod( 'mg_social_linkedin' ); ?>
         <?php if( !empty( $url ) ): ?>
-        <a <?php echo $target ?>class="mgss__linkedin mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="icon-linkedin"></i></a>
+        <a <?php echo $target ?>class="mgss__linkedin mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="mgsf-icon-linkedin"></i></a>
         <?php endif; ?>
 
         <?php $url = get_theme_mod( 'mg_social_youtube' ); ?>
         <?php if( !empty( $url ) ): ?>
-            <a <?php echo $target ?>class="mgss__youtube mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="icon-youtube-play"></i></a>
+            <a <?php echo $target ?>class="mgss__youtube mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="mgsf-icon-youtube-play"></i></a>
         <?php endif; ?>
 
         <?php $url = get_theme_mod( 'mg_social_vimeo' ); ?>
         <?php if( !empty( $url ) ): ?>
-            <a <?php echo $target ?>class="mgss__vimeo mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="icon-vimeo"></i></a>
+            <a <?php echo $target ?>class="mgss__vimeo mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="mgsf-icon-vimeo"></i></a>
         <?php endif; ?>
 
         <?php $url = get_theme_mod( 'mg_social_instagram' ); ?>
         <?php if( !empty( $url ) ): ?>
-            <a <?php echo $target ?>class="mgss__instagram mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="icon-vimeo-squared"></i></a>
+            <a <?php echo $target ?>class="mgss__instagram mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="mgsf-icon-vimeo-squared"></i></a>
         <?php endif; ?>
 
     </div>
