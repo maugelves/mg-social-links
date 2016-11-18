@@ -22,31 +22,35 @@ add_action( 'wp_enqueue_scripts', 'mg_social_links_font' );
  * Display the Social Links
  */
 function mg_social_links(){
+
+    // Get the links target
+    $target = get_theme_mod( 'mg_social_blank' ) ? 'target="_blank" ' : '';
+
     ?>
     <div class="mg-social-links">
         <?php $url = get_theme_mod( 'mg_social_twitter' ); ?>
         <?php if( !empty( $url ) ): ?>
-        <a class="mgsl__twitter mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Twitter" href="<?php echo $url; ?>"><i class="icon-twitter"></i></a>
+        <a <?php echo $target ?>class="mgss__twitter mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Twitter" href="<?php echo $url; ?>"><i class="icon-twitter"></i></a>
         <?php endif; ?>
 
         <?php $url = get_theme_mod( 'mg_social_tumblr' ); ?>
         <?php if( !empty( $url ) ): ?>
-        <a class="mgsl__tumblr mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Tumblr" href="<?php echo $url; ?>"><i class="icon-tumblr"></i></a>
+        <a <?php echo $target ?>class="mgss__tumblr mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Tumblr" href="<?php echo $url; ?>"><i class="icon-tumblr"></i></a>
         <?php endif; ?>
 
         <?php $url = get_theme_mod( 'mg_social_facebook' ); ?>
         <?php if( !empty( $url ) ): ?>
-        <a class="mgsl__facebook mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Facebook" href="<?php echo $url; ?>"><i class="icon-facebook"></i></a>
+        <a <?php echo $target ?>class="mgss__facebook mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Facebook" href="<?php echo $url; ?>"><i class="icon-facebook"></i></a>
         <?php endif; ?>
 
         <?php $url = get_theme_mod( 'mg_social_linkedin' ); ?>
         <?php if( !empty( $url ) ): ?>
-        <a class="mgsl__linkedin mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="icon-linkedin"></i></a>
+        <a <?php echo $target ?>class="mgss__linkedin mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="icon-linkedin"></i></a>
         <?php endif; ?>
 
         <?php $url = get_theme_mod( 'mg_social_instagram' ); ?>
         <?php if( !empty( $url ) ): ?>
-            <a class="mgsl__instagram mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="icon-instagram"></i></a>
+            <a <?php echo $target ?>class="mgss__instagram mgsl__item" rel="me" title="<?php echo bloginfo('name'); ?> en Linkedin" href="<?php echo $url; ?>"><i class="icon-instagram"></i></a>
         <?php endif; ?>
 
     </div>
@@ -68,41 +72,49 @@ function mg_customize_social_links( $wp_customize ) {
     $wp_customize->add_setting( 'mg_social_linkedin', array( ) );
     $wp_customize->add_setting( 'mg_social_tumbler', array( ) );
     $wp_customize->add_setting( 'mg_social_twitter', array( ) );
+    $wp_customize->add_setting( 'mg_social_blank', array( ) );
 
 
     $wp_customize->add_control( 'mg_social_facebook_control', array(
-        'label' => __( 'Facebook URL' ),
+        'label' => __( 'Facebook URL', 'mgss'),
         'type' => 'text',
         'section' => 'mg_social_links',
         'settings' => 'mg_social_facebook'
     ) );
 
     $wp_customize->add_control( 'mg_social_instagram_control', array(
-        'label' => __( 'Instagram URL' ),
+        'label' => __( 'Instagram URL', 'mgss' ),
         'type' => 'text',
         'section' => 'mg_social_links',
         'settings' => 'mg_social_instagram'
     ) );
 
     $wp_customize->add_control( 'mg_social_tumblr_control', array(
-        'label' => __( 'Tumblr URL' ),
+        'label' => __( 'Tumblr URL', 'mgss' ),
         'type' => 'text',
         'section' => 'mg_social_links',
         'settings' => 'mg_social_tumbler'
     ) );
 
     $wp_customize->add_control( 'mg_social_twitter_control', array(
-        'label' => __( 'Twitter URL' ),
+        'label' => __( 'Twitter URL', 'mgss' ),
         'type' => 'text',
         'section' => 'mg_social_links',
         'settings' => 'mg_social_twitter'
     ) );
 
     $wp_customize->add_control( 'mg_social_linkedin_control', array(
-        'label' => __( 'Linkedin URL' ),
+        'label' => __( 'Linkedin URL', 'mgss' ),
         'type' => 'text',
         'section' => 'mg_social_links',
         'settings' => 'mg_social_linkedin'
+    ) );
+
+    $wp_customize->add_control( 'mg_social_blank_control', array(
+        'label' => __( 'Should be opened in a new window', 'mgss' ),
+        'type' => 'checkbox',
+        'section' => 'mg_social_links',
+        'settings' => 'mg_social_blank'
     ) );
 
 }
