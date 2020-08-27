@@ -13,7 +13,7 @@ Domain Path: /languages
 */
 
 function mg_social_links_font(){
-    wp_enqueue_style( 'mg-fontawesome', plugins_url('css/font-awesome.min.css', __FILE__) , array(), 1.0 );
+    wp_enqueue_style( 'mg-fontawesome', plugins_url('css/font-awesome.min.css', __FILE__) , [], "1.0" );
 }
 add_action( 'wp_enqueue_scripts', 'mg_social_links_font' );
 
@@ -24,7 +24,7 @@ add_action( 'wp_enqueue_scripts', 'mg_social_links_font' );
 function mg_social_links(){
 
     // Get the links target
-    $target = get_theme_mod( 'mg_social_blank' ) ? 'target="_blank" ' : '';
+    $target = get_theme_mod( 'mg_social_blank' ) ? 'target="_blank" rel="noreferrer noopener" ' : '';
 
     ?>
     <div class="mg-social-links">
